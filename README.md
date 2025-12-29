@@ -1,10 +1,4 @@
-# 🩺 MediScan AI — Disease Prediction & AI Doctor
-
-┌───────────────────────────────────────────────┐
-│ MediScan AI │
-│ Smart Disease Prediction & AI Health Chatbot │
-└───────────────────────────────────────────────┘
-
+# 🩺 AI — Disease Prediction
 
 AI-powered healthcare web application that predicts diseases based on symptoms and allows users to chat with an AI doctor for medical guidance.
 
