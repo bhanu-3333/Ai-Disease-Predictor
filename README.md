@@ -1,47 +1,61 @@
-🩺 MediScan AI – Disease Prediction & AI Doctor
+# 🩺 MediScan AI — Disease Prediction & AI Doctor
 
-MediScan AI is a smart healthcare web application that predicts diseases based on symptoms using Machine Learning and allows users to chat with an AI doctor for medical guidance.
+┌───────────────────────────────────────────────┐
+│ MediScan AI │
+│ Smart Disease Prediction & AI Health Chatbot │
+└───────────────────────────────────────────────┘
 
-This project combines Machine Learning + Web Development + AI Chatbot to simulate a real-world digital health assistant.
 
-🚀 Features
+AI-powered healthcare web application that predicts diseases based on symptoms and allows users to chat with an AI doctor for medical guidance.
 
-🧠 Disease prediction using Machine Learning
+This project combines **Machine Learning, Web Development, and AI Chat** to simulate a real-world digital health assistant.
 
-🧪 Symptom-based diagnosis
+---
 
-🤖 AI Doctor chatbot for medical advice
+## 🚀 Features
 
-🌐 React-based modern frontend
+✔ Symptom-based disease prediction
+✔ Machine Learning (Naive Bayes)
+✔ AI Doctor chatbot for advice
+✔ React frontend (modern UI)
+✔ Flask backend API
+✔ Secure API key handling (.env)
 
-🔗 Flask backend API
 
-🎨 Pastel themed professional UI
 
-🛠 Tech Stack
+---
 
-Frontend
+## 🧠 How It Works
 
-React (Vite)
+User selects symptoms
+↓
+ML model predicts disease
+↓
+AI Doctor chatbot activates
+↓
+User gets food, medicine & health advice
 
-CSS
 
-Backend
 
-Python
+---
 
-Flask
+## 🛠 Tech Stack
 
-Pandas
+Frontend:
+• React (Vite)
+• CSS
 
-Scikit-learn
+Backend:
+• Python
+• Flask
+• Flask-CORS
+• Pandas
+• Scikit-learn
+• Joblib
 
-Joblib
+AI:
+• HuggingFace Inference API
+• Groq (for testing)
 
-HuggingFace AI API
-
-Machine Learning
-
-Naive Bayes (BernoulliNB)
-
-Symptom based classification
+Machine Learning:
+• Bernoulli Naive Bayes Classifier
