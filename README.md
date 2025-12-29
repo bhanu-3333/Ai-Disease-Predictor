@@ -1,19 +1,47 @@
-# 🩺 AI Disease Prediction System
+🩺 MediScan AI – Disease Prediction & AI Doctor
 
-This project is an AI-powered disease prediction system that predicts possible diseases based on patient symptoms.
+MediScan AI is a smart healthcare web application that predicts diseases based on symptoms using Machine Learning and allows users to chat with an AI doctor for medical guidance.
 
-It uses Machine Learning (Naive Bayes) trained on medical symptom data and provides predictions through a Flask API.
+This project combines Machine Learning + Web Development + AI Chatbot to simulate a real-world digital health assistant.
 
-## 🚀 Features
-- Predicts diseases from symptoms
-- Uses Machine Learning (Naive Bayes)
-- REST API built with Flask
-- Real-time prediction
+🚀 Features
 
-## 🧠 Tech Stack
-- Python
-- Pandas
-- Scikit-learn
-- Flask
-- Machine Learning
+🧠 Disease prediction using Machine Learning
 
+🧪 Symptom-based diagnosis
+
+🤖 AI Doctor chatbot for medical advice
+
+🌐 React-based modern frontend
+
+🔗 Flask backend API
+
+🎨 Pastel themed professional UI
+
+🛠 Tech Stack
+
+Frontend
+
+React (Vite)
+
+CSS
+
+Backend
+
+Python
+
+Flask
+
+Pandas
+
+Scikit-learn
+
+Joblib
+
+HuggingFace AI API
+
+Machine Learning
+
+Naive Bayes (BernoulliNB)
+
+Symptom based classification
