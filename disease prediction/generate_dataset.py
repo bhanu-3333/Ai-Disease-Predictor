@@ -54,5 +54,6 @@ for _ in range(2000):
     row["disease"] = disease
     rows.append(row)
 
+
 pd.DataFrame(rows).to_csv("dataset.csv", index=False)
 print("dataset.csv created successfully")
