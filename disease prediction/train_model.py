@@ -5,6 +5,7 @@ import joblib
 print("Loading dataset...")
 data = pd.read_csv("dataset.csv")
 
+
 # Features (30 symptoms)
 X = data.drop("disease", axis=1)
 
