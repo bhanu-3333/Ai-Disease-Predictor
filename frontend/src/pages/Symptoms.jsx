@@ -116,6 +116,7 @@ const diseaseInfo = {
 };
 
 
+
 export default function Symptoms({ goChat }) {
   const [data, setData] = useState(
     Object.keys(symptomsList).reduce((a, k) => ({ ...a, [k]: 0 }), {})
