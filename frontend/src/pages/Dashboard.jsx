@@ -11,6 +11,7 @@ export default function Dashboard() {
         <Link to="/">Logout</Link>
       </aside>
 
+
       <main className="content">
         <Outlet />
       </main>
