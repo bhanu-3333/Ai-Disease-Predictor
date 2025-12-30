@@ -15,6 +15,10 @@ export default function App() {
         <Symptoms goChat={(d) => { setDisease(d); setPage("chat"); }} />
       )}
       {page === "chat" && <Chat disease={disease} />}
+      <button className="chatBtn" onClick={() => setPage("chat")}>
+  🤖 AI Doctor
+</button>
+
     </>
   );
 }
