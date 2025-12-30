@@ -46,5 +46,6 @@ export default function Signup() {
         Already have account? <Link to="/">Login</Link>
       </p>
     </div>
+    
   );
 }
