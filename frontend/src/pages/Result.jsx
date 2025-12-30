@@ -14,5 +14,6 @@ export default function Result({ disease, goBack }) {
       <p className="ai">🤖 AI Doctor: {doctor[disease]}</p>
       <button onClick={goBack}>Check Again</button>
     </div>
+    
   );
 }
