@@ -5,6 +5,9 @@ import pandas as pd
 import os
 from dotenv import load_dotenv
 from groq import Groq
+from flask_sqlalchemy import SQLAlchemy
+from flask_jwt_extended import create_access_token, JWTManager
+from models import db, User
 
 # Load .env
 load_dotenv()
@@ -18,6 +21,14 @@ client = Groq(api_key=GROQ_KEY)
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
+app.config["JWT_SECRET_KEY"] = "2fe32ce2da63ea98d8300cfb4984cb15cea979f7ce375de7063a65e74c438f7f"
+
+db.init_app(app)
+jwt = JWTManager(app)
+
+with app.app_context():
+    db.create_all()
 
 # Load ML model
 model = joblib.load("disease_model.pkl")
@@ -32,6 +43,32 @@ def predict():
         return jsonify({"disease": disease})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+@app.route("/signup", methods=["POST"])
+def signup():
+    data = request.json
+
+    if not data or not data.get("email") or not data.get("password"):
+        return jsonify({"error": "Missing email or password"}), 400
+
+    if User.query.filter_by(email=data["email"]).first():
+        return jsonify({"error": "User already exists"}), 400
+
+    user = User(email=data["email"], password=data["password"])
+    db.session.add(user)
+    db.session.commit()
+
+    return jsonify({"msg": "Account created"})
+
+@app.route("/login", methods=["POST"])
+def login():
+    data = request.json
+    user = User.query.filter_by(email=data["email"], password=data["password"]).first()
+
+    if not user:
+        return jsonify({"error": "Invalid credentials"}), 401
+
+    token = create_access_token(identity=user.id)
+    return jsonify({"token": token})
 
 # ---------------- Real AI Doctor ----------------
 @app.route("/chat", methods=["POST"])

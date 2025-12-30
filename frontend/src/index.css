@@ -66,3 +66,30 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.symptomGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.symptom {
+  padding: 12px;
+  background: #e5f4ef;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.symptom.on {
+  background: #0f7a5c;
+  color: white;
+}
+
+.resultBox {
+  margin-top: 25px;
+  background: #e8f8f3;
+  padding: 20px;
+  border-radius: 15px;
+}

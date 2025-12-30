@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
-
-export default function Home({ go }) {
+export default function Home() {
   return (
-    <motion.div className="center" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <h1>🩺 MediScan AI</h1>
-      <p>Your Personal AI Doctor</p>
-      <button onClick={go}>Start Health Check</button>
-    </motion.div>
+    <div className="card">
+      <h1>AI Health Assistant</h1>
+      <p>
+        MediScan AI uses Machine Learning and Artificial Intelligence to predict
+        diseases and provide instant medical guidance.
+      </p>
+    </div>
   );
 }
