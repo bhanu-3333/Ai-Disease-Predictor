@@ -19,6 +19,7 @@ export default function Chat({ disease = "unknown" }) {
     setMsg("");
   };
 
+  
   return (
     <div className="card">
       <h2>🤖 AI Doctor</h2>
