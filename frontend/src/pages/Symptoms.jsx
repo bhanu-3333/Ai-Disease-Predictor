@@ -115,6 +115,28 @@ const diseaseInfo = {
   }
 };
 
+const doctorMap = {
+  "Flu": "General Physician",
+  "COVID-19": "Pulmonologist",
+  "Food Poisoning": "General Physician",
+  "Typhoid": "General Physician",
+  "Migraine": "Neurologist",
+  "Dengue": "General Physician",
+  "Common Cold": "General Physician",
+  "Stomach Infection": "Gastroenterologist",
+  "Malaria": "General Physician",
+  "Pneumonia": "Pulmonologist",
+  "Bronchitis": "Pulmonologist",
+  "Asthma": "Pulmonologist",
+  "Tuberculosis": "Pulmonologist",
+  "Diabetes": "Endocrinologist",
+  "Hypertension": "Cardiologist",
+  "Anemia": "General Physician",
+  "Hepatitis": "Hepatologist",
+  "Kidney Infection": "Nephrologist",
+  "Urinary Tract Infection": "Urologist",
+  "Gastritis": "Gastroenterologist"
+};
 
 
 export default function Symptoms({ goChat }) {
@@ -123,6 +145,32 @@ export default function Symptoms({ goChat }) {
   );
 
   const [result, setResult] = useState("");
+const downloadReport = async () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const res = await fetch("http://127.0.0.1:5000/report", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: user.name,
+      age: user.age,
+      gender: user.gender,
+      disease: result,
+      symptoms: Object.keys(data).filter(k => data[k]).join(", "),
+      doctor: doctorMap[result],
+      advice: diseaseInfo[result]?.advice
+    })
+  });
+
+  const blob = await res.blob();
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "medical_report.pdf";
+  a.click();
+};
+
+
 
   const toggle = (k) => {
     setData({ ...data, [k]: data[k] ? 0 : 1 });
@@ -156,18 +204,24 @@ export default function Symptoms({ goChat }) {
 
       <button onClick={submit}>Predict Disease</button>
 
-      {result && (
-        <div className="resultBox">
-          <h3>🩺 Possible Disease</h3>
-          <p><b>{result}</b></p>
-<p>{diseaseInfo[result]?.desc}</p>
-<p><b>Doctor Advice:</b> {diseaseInfo[result]?.advice}</p>
+     {result && (
+  <>
+    <p>{result}</p>
+    <p>{diseaseInfo[result]?.desc}</p>
+    <p><b>Doctor Advice:</b> {diseaseInfo[result]?.advice}</p>
+    <p><b>Recommended Doctor:</b> {doctorMap[result]}</p>
 
-          <button onClick={() => goChat(result)}>
-            🤖 Talk to AI Doctor
-          </button>
-        </div>
-      )}
+    <button onClick={downloadReport}>
+      📄 Download Medical Report
+    </button>
+    <button onClick={() => goChat(result)}>
+  🤖 Talk to AI Doctor
+</button>
+
+  </>
+)}
+
+     
     </div>
   );
 }
