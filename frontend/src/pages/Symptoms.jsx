@@ -166,7 +166,7 @@ const downloadReport = async () => {
   const url = window.URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "medical_report.pdf";
+  a.download = "MediScan_Report.pdf";
   a.click();
 };
 
