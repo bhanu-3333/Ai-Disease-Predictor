@@ -15,9 +15,14 @@ export default function Login() {
 
     const data = await res.json();
 
-    if (data.token) {
-      localStorage.setItem("token", data.token);
-      nav("/dashboard");
+  if (data.token) {
+  localStorage.setItem("token", data.token);
+  localStorage.setItem("user", JSON.stringify({
+    name: data.name,
+    age: data.age,
+    gender: data.gender
+  }));
+  nav("/dashboard");
     } else {
       alert(data.error || "Login failed");
     }
