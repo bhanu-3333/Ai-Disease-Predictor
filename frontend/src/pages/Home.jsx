@@ -173,25 +173,70 @@ export default function Home() {
 
   </div>
 </section>
+{/* HOW CURA AI WORKS */}
+<section className="howWorks">
 
-      {/* HOW IT WORKS */}
-      <section className="how">
-        <h2>How CURA AI Works</h2>
-        <div className="steps">
-          <div>1️⃣ Enter your symptoms</div>
-          <div>2️⃣ Get AI disease prediction</div>
-          <div>3️⃣ Talk with AI doctor</div>
-          <div>4️⃣ Download your medical report</div>
-        </div>
-      </section>
+  <h2>
+    How CURA AI <span>works</span>
+  </h2>
+  <p className="howSub">
+    From symptoms to solutions in just four simple steps.
+  </p>
 
-      {/* CTA */}
-      <section className="cta">
-        <h2>Smarter healthcare starts here.</h2>
-        <Link to="/symptoms" className="primaryBtn">
-          Start Health Check
-        </Link>
-      </section>
+  <div className="howLayout">
+
+    {/* LEFT */}
+    <div className="howColumn">
+      <div className="howCard">
+        <span className="stepTag">Step 01</span>
+        <h3>Share your symptoms</h3>
+        <p>
+          Tell CURA AI how you are feeling in simple words or by selecting
+          symptoms.
+        </p>
+      </div>
+
+      <div className="howCard">
+        <span className="stepTag">Step 02</span>
+        <h3>Get AI diagnosis</h3>
+        <p>
+          Our machine learning model analyzes your symptoms and predicts
+          possible diseases.
+        </p>
+      </div>
+    </div>
+
+    {/* CENTER IMAGE */}
+    <div className="howImage">
+      <img src="/images/heart.png" alt="Health AI" />
+    </div>
+
+    {/* RIGHT */}
+    <div className="howColumn">
+      <div className="howCard">
+        <span className="stepTag">Step 03</span>
+        <h3>Talk to AI Doctor</h3>
+        <p>
+          Chat with our intelligent medical assistant to get treatment
+          guidance and precautions.
+        </p>
+      </div>
+
+      <div className="howCard">
+        <span className="stepTag">Step 04</span>
+        <h3>Download your report</h3>
+        <p>
+          Receive a professional medical report with disease details,
+          doctor recommendation and advice.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+   
+
 
       {/* FOOTER */}
       <footer>
