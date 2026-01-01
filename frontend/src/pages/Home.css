@@ -220,7 +220,10 @@ footer {
 }
 
 .aboutImg {
-  width: 120px;
+  width: 270px;
+  position: relative;
+  right: 40px;
+  bottom:50px;
 }
 
 .aboutRight {
