@@ -83,6 +83,28 @@ export default function Home() {
           </p>
         </div>
       </section>
+{/* ABOUT CURA AI */}
+<section className="about">
+  <div className="aboutLeft">
+    <p className="aboutSmall">( SINCE 2025 )</p>
+    <h4>About CURA AI</h4>
+
+    <img 
+      src="/icons/medical-bag.png" 
+      alt="CURA AI"
+      className="aboutImg"
+    />
+  </div>
+
+  <div className="aboutRight">
+    <p className="aboutBigText">
+      At CURA AI, we make healthcare smart, fast, and accessible for everyone.
+      Our mission is to use artificial intelligence to help people detect diseases early,
+      consult an AI doctor anytime, and generate hospital-style medical reports,
+      ensuring you receive the right care without delays or confusion.
+    </p>
+  </div>
+</section>
 
       {/* HOW IT WORKS */}
       <section className="how">
