@@ -27,12 +27,12 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
 }
 
 .logo img {
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
 }
 
 .logo span {
@@ -48,7 +48,9 @@
   color: #222;
   font-weight: 500;
 }
-
+.navLinks a:hover {
+  color: #1FA46B;   /* CURA AI green */
+}
 /* HERO */
 .hero {
   display: grid;
@@ -81,32 +83,25 @@
   gap: 18px;
 }
 
-.primaryBtn {
-  background: var(--green);
-  color: white;
+.primaryBtn,
+.secondaryBtn {
   padding: 14px 30px;
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s;
-}
-
-.primaryBtn:hover {
-  background: #178b5a;
-}
-
-.secondaryBtn {
   border: 2px solid var(--green);
-  padding: 12px 28px;
-  border-radius: 50px;
-  font-weight: 600;
+  background: transparent;
   color: var(--green);
-  text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
+/* Hover Effect */
+.primaryBtn:hover,
 .secondaryBtn:hover {
-  background: var(--green-soft);
+  background: var(--green);
+  color: white;
+  box-shadow: 0 8px 20px rgba(31,164,107,0.3);
+  transform: translateY(-2px);
 }
 
 /* HERO IMAGE */
@@ -200,4 +195,41 @@ footer {
   padding: 30px;
   background: var(--bg-main);
   color: #555;
+}
+.about {
+  display: flex;
+  gap: 80px;
+  padding: 120px 80px;
+  background: #fdfefb;
+}
+
+.aboutLeft {
+  width: 30%;
+}
+
+.aboutSmall {
+  color: #1FA46B;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.aboutLeft h4 {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.aboutImg {
+  width: 120px;
+}
+
+.aboutRight {
+  width: 60%;
+}
+
+.aboutBigText {
+  font-size: 32px;
+  line-height: 1.4;
+  color: #111;
+  font-weight: 500;
 }
