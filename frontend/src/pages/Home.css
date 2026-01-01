@@ -387,9 +387,17 @@ footer {
   font-weight: 400;
 }
 
+.faqLeft {
+  position: relative;
+}
+
 .faqLeft img {
-  width: 120px;
-  margin-top: 40px;
+  width: 300px;          /* change size */
+  height: 200px;
+  position: relative;   /* allows moving freely */
+       /* move up/down */
+  top: 30px;           /* move left/right */
+  opacity: 0.9;         /* softer look */
 }
 
 /* FAQ Right */
@@ -420,4 +428,66 @@ footer {
 
 .faqRight details summary::-webkit-details-marker {
   display: none;
+}
+/* FAQ */
+.faqSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  background: #fdfcf7;
+}
+
+.faqLeft h2 {
+  font-size: 42px;
+}
+
+.faqLeft span {
+  color: #1fa46b;
+}
+
+.faqLeft img {
+  width: 150px;
+  margin-top: 30px;
+}
+
+.faqRight {
+  width: 600px;
+}
+
+.faqItem {
+  background: #f3f1eb;
+  padding: 20px 24px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.faqItem.active {
+  background: #1fa46b;
+  color: white;
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.faqArrow {
+  width: 18px;
+}
+
+.faqAnswer {
+  margin-top: 12px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+footer {
+  background: #1fa46b;   /* CURA green */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
 }
