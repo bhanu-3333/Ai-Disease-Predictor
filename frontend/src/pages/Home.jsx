@@ -90,7 +90,7 @@ export default function Home() {
     <h4>About CURA AI</h4>
 
     <img 
-      src="/icons/medical-bag.png" 
+      src="/images/medical.png" 
       alt="CURA AI"
       className="aboutImg"
     />
