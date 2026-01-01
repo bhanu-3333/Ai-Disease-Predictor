@@ -236,3 +236,65 @@ footer {
   color: #111;
   font-weight: 500;
 }
+/* CURA SERVICES SECTION */
+.curaServices {
+  background:  #1FA46B;
+  padding: 90px 80px;
+  text-align: center;
+}
+
+.curaServices h2 {
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+}
+
+.curaServices h2 span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.curaServices .subText {
+  color: #d9f5ea;
+  max-width: 600px;
+  margin: 15px auto 50px;
+  font-size: 16px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.serviceCard {
+  background: #f8f6ef;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+}
+
+.serviceCard span {
+  display: inline-block;
+  background:  #1FA46B;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.serviceCard h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.serviceCard p {
+  font-size: 14px;
+  color: #444;
+}
