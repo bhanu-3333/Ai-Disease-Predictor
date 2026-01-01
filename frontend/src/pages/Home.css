@@ -1,0 +1,117 @@
+.home {
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fdfb;
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1FA46B;
+}
+
+.navLinks a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navLinks .btn {
+  background: #1FA46B;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  gap: 50px;
+}
+
+.heroText h1 {
+  font-size: 50px;
+}
+
+.heroText span {
+  color: #1FA46B;
+}
+
+.heroBtns a {
+  margin-right: 15px;
+}
+
+.primaryBtn {
+  background: #1FA46B;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.secondaryBtn {
+  border: 2px solid #1FA46B;
+  padding: 14px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #1FA46B;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 60px;
+}
+
+.featureCard {
+  background: #f1fbf7;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.featureCard img {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+/* HOW */
+.how {
+  padding: 60px;
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* CTA */
+.cta {
+  background: #1FA46B;
+  color: white;
+  text-align: center;
+  padding: 60px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: white;
+}
