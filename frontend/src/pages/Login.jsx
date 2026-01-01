@@ -22,7 +22,7 @@ export default function Login() {
     age: data.age,
     gender: data.gender
   }));
-  nav("/dashboard");
+  nav("/home");
     } else {
       alert(data.error || "Login failed");
     }
