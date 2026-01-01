@@ -220,10 +220,10 @@ footer {
 }
 
 .aboutImg {
-  width: 270px;
+  width: 200px;
   position: relative;
   right: 40px;
-  bottom:50px;
+  bottom:0px;
 }
 
 .aboutRight {
@@ -297,4 +297,73 @@ footer {
 .serviceCard p {
   font-size: 14px;
   color: #444;
+}
+/* HOW IT WORKS */
+.howWorks {
+  background: #fdfaf4;
+  padding: 100px 80px;
+  text-align: center;
+}
+
+.howWorks h2 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.howWorks h2 span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.howSub {
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.howLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Cards */
+.howColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.howCard {
+  background: #f4f1ea;
+  padding: 28px;
+  border-radius: 18px;
+  text-align: left;
+}
+
+.howCard h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.howCard p {
+  color: #555;
+  font-size: 14px;
+}
+
+.stepTag {
+  background: #0f7c5b;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* Center image */
+.howImage img {
+  width: 330px;
+  position: relative;
+  bottom: 30px;
+ 
 }
