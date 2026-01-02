@@ -364,7 +364,14 @@ export default function Symptoms({ goChat }) {
           .buttonGroup button {
             width: 100%;
           }
+            @media (max-width: 768px) {
+  .floatingImage {
+  display:none;
+  }
+}
+
         }
+
       `}</style>
 
       <div className="symptomsContainer">
