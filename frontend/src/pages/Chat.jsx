@@ -247,7 +247,93 @@ export default function Chat({ disease = "unknown" }) {
           button {
             width: 100%;
           }
+            @media (max-width: 768px) {
+  .inputSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .robotImage {
+    width: 80px;
+    height: 80px;
+   
+  }
+
+  .inputWrapper {
+    flex-direction: row;
+  }
+
+  input {
+    right: 0;   /* remove desktop offset */
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+
+  .chatContainer {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .card {
+    padding: 16px;
+    height: auto;
+    max-height: 92vh;
+  }
+
+  .card h2 {
+    font-size: 22px;
+    gap: 8px;
+  }
+
+  .chatbox {
+    padding: 14px;
+  }
+
+  .messageText {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Input section stacked */
+  .inputSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .robotImage {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+  }
+
+  .inputWrapper {
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    right: 0;   /* remove desktop offset */
+  }
+
+  button {
+    width: 50%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+}
+
+}
+
         }
+
       `}</style>
 
       <div className="chatContainer">
