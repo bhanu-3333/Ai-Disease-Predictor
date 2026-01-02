@@ -1,0 +1,82 @@
+.signupWrapper {
+  height: 100vh;
+  background: #f9fdfb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Signup Card */
+.signupBox {
+  background: white;
+  padding: 50px;
+  width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  text-align: center;
+  z-index: 5;
+}
+
+.signupBox h1 {
+  color: #1FA46B;
+  margin-bottom: 8px;
+}
+
+.signupBox p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.signupBox input,
+.signupBox select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #dfeee8;
+  outline: none;
+}
+
+.signupBox input:focus,
+.signupBox select:focus {
+  border-color: #1FA46B;
+}
+
+.signupBox button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  background: #1FA46B;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signupBox button:hover {
+  background: #178e5e;
+}
+
+.loginText {
+  margin-top: 20px;
+}
+
+.loginText a {
+  color: #1FA46B;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Floating Images */
+.floatImg {
+  position: absolute;
+  width: 300px;
+  opacity: 0.8;
+}
+
+
+
+.img4 { bottom: 0%; right: 16%; }
