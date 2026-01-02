@@ -1,0 +1,153 @@
+/* PAGE */
+.card {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 40px;
+   background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+}
+body {
+  background: #f3f1eb;
+}
+/* Full page layout */
+.symptomPage {
+  width: 100vw;
+  height: 100vh;
+  background: #f3f1eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Content container */
+.symptomContent {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+}
+
+/* Floating icons */
+.floatIcon {
+  position: absolute;
+  width: 140px;
+  opacity: 0.15;
+  animation: float 7s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* PDF icon */
+.pdfIcon {
+  left: 6%;
+  top: 40%;
+}
+
+/* AI Doctor icon */
+.aiIcon {
+  right: 6%;
+  top: 42%;
+  animation-delay: 2s;
+}
+
+/* Floating motion */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Symptoms content should be above icons */
+.symptomContent {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITLE */
+.card h2 {
+  text-align: center;
+  font-size: 34px;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.symptomGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 18px;
+}
+
+/* SYMPTOM TILE */
+.symptom {
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid #e5f4ee;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.symptom:hover {
+  border-color: #22c55e;
+  background: #f0fdf4;
+  transform: translateY(-3px);
+}
+
+.symptom.on {
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+  color: white;
+  border: none;
+  box-shadow: 0 10px 25px rgba(34,197,94,0.35);
+}
+
+/* PREDICT BUTTON */
+.card button {
+  margin-top: 40px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 40px;
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(34,197,94,0.4);
+}
+
+/* RESULT PANEL */
+.card > p {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card > p:first-of-type {
+  font-size: 28px;
+  color: #16a34a;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+/* ACTION BUTTONS */
+.card > button:nth-of-type(2),
+.card > button:nth-of-type(3) {
+  background: white;
+  color: #16a34a;
+  border: 2px solid #22c55e;
+  margin-top: 16px;
+}
+
+.card > button:nth-of-type(2):hover,
+.card > button:nth-of-type(3):hover {
+  background: #22c55e;
+  color: white;
+}
