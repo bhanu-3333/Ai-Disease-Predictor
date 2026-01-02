@@ -1,0 +1,81 @@
+.loginWrapper {
+  height: 100vh;
+  background: #f9fdfb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Center Login Card */
+.loginBox {
+  background: white;
+  padding: 50px;
+  width: 360px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  text-align: center;
+  z-index: 5;
+}
+
+.loginBox h1 {
+  color: #1FA46B;
+  margin-bottom: 10px;
+}
+
+.loginBox p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.loginBox input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #dfeee8;
+  outline: none;
+}
+
+.loginBox input:focus {
+  border-color: #1FA46B;
+}
+
+.loginBox button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  background: #1FA46B;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loginBox button:hover {
+  background: #178e5e;
+}
+
+.signupText {
+  margin-top: 20px;
+}
+
+.signupText a {
+  color: #1FA46B;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Floating Images */
+.floatImg {
+  position: absolute;
+  width: 240px;
+  opacity: 0.8;
+}
+
+/* Positions */
+.img1 { top: 10%; left: 20%; }
+
+.img4 { bottom: 0%; right: 15%; }
