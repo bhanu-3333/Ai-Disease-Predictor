@@ -1,108 +1,131 @@
-🩺 CURA AI — Intelligent Medical Assistant
+🩺 CURA AI – Intelligent Medical Assistant
 
-CURA AI is an AI-powered healthcare assistant that predicts diseases from symptoms and allows users to chat with an AI doctor for personalized medical guidance.
+CURA AI is an AI-powered healthcare platform that helps users predict possible diseases based on their symptoms, consult an AI doctor, and generate professional medical reports — all in one place.
 
-It combines Machine Learning + AI Chat + PDF Medical Reports into a single smart healthcare platform.
+The goal of CURA AI is to make healthcare more simple, fast, and accessible for everyone.
 
-🚀 What CURA AI Does
-
-CURA AI helps users to:
-
-Select their symptoms
-
-Predict the most likely disease
-
-Get medical advice
-
-Download a medical report (PDF)
-
-Chat with an AI Doctor in real time
-
-All in one smooth experience.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-🧠 How CURA AI Works (Step-by-Step)
-1️⃣ User Login
 
-User logs in or signs up into the CURA AI system.
+✨ Features
 
-2️⃣ Symptom Selection
+AI Disease Prediction
+Uses a trained machine learning model to analyze 30+ symptoms and predict 20+ diseases.
 
-User selects symptoms like:
+AI Doctor Chatbot
+An intelligent medical assistant that gives friendly and safe health guidance.
 
-Fever
+Symptom Checker
+Users can select symptoms in a simple UI and get instant results.
 
-Cough
+Doctor Recommendation System
+Suggests the right specialist (General Physician, Cardiologist, Pulmonologist, etc.)
 
-Headache
+Medical Report Generator
+Generates professional hospital-style PDF medical reports.
 
-Body pain
+User Accounts
+Secure login & signup system with stored patient information.
 
-Breathing problem, etc.
-
-3️⃣ Disease Prediction
-
-The selected symptoms are sent to a Flask ML API, which predicts the most likely disease.
-
-4️⃣ Medical Result
-
-CURA AI shows:
-
-Predicted disease
-
-Description
-
-Doctor advice
-
-Recommended specialist
-
-5️⃣ Download Medical Report
-
-User can download a PDF medical report containing:
-
-Patient name
-
-Symptoms
-
-Disease
-
-Doctor advice
-
-Date
-
-6️⃣ Talk to AI Doctor
-
-User clicks “Talk to AI Doctor” and starts chatting with an AI assistant trained to give medical guidance based on the predicted disease.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-🛠️ Tech Stack
-Frontend
 
-React.js
+🧠 Tech Stack
 
-React Router
+Frontend:
 
-CSS (Custom UI)
+React (Vite)
 
-Backend
+Modern UI with animations and medical-themed design
+
+
+Backend:
 
 Python
 
 Flask
 
-REST APIs
+Flask-SQLAlchemy
 
-AI & ML
+Flask-JWT-Extended
 
-Disease Prediction Model (Machine Learning)
+Groq AI API
 
-AI Chat API (for medical conversation)
+ReportLab (PDF generation)
 
-Other
 
-PDF generation using ReportLab
+Machine Learning:
 
-Fetch API for communication
+Scikit-learn
 
-|---------------------------------------------------|
+Trained on 30+ symptoms & 20+ diseases
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+⚙️ Setup & Run
+
+Backend:
+
+cd backend
+
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python app.py
+
+
+Create a .env file:
+
+GROQ_API_KEY=your_api_key_here
+
+
+Backend runs on:
+
+http://127.0.0.1:5000
+
+Frontend:
+
+cd frontend
+
+npm install
+
+npm run dev
+
+
+Frontend runs on:
+
+http://localhost:5173
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🩻 How It Works
+
+User signs up and logs in
+
+Selects symptoms
+
+AI predicts possible disease
+
+User chats with AI Doctor
+
+Downloads medical report
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔐 Privacy & Safety
+
+User data is securely stored
+
+Reports are generated only for the logged-in user
+
+AI provides guidance but does not replace real doctors
+
+📌 Project Goal
+
+To make healthcare smarter, faster, and more accessible using AI and machine learning.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🖼 Sample Output
 <div align="center">
@@ -113,3 +136,7 @@ Fetch API for communication
   <img src="screenshot/output5.png" width="70%" /><br><br>
   <img src="screenshot/output6.png" width="70%" />
 </div>
+
+ Built by...
+
+Bhanu💚
