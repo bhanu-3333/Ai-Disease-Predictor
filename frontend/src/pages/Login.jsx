@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-
+import "./login.css";
 export default function Login() {
   const nav = useNavigate();
   const [email, setEmail] = useState("");
@@ -28,9 +28,19 @@ export default function Login() {
     }
   };
 
-  return (
-    <div className="auth">
-      <h1>MediScan Login</h1>
+return (
+  <div className="loginWrapper">
+
+    {/* Floating images */}
+    <img src="/images/tube.png" className="floatImg img1" />
+
+    <img src="/images/tube.png" className="floatImg img4" />
+
+    {/* Center Login Box */}
+    <div className="loginBox">
+
+      <h1>Welcome Back</h1>
+      <p>Login to continue your CURA AI journey</p>
 
       <input
         placeholder="Email"
@@ -47,10 +57,14 @@ export default function Login() {
 
       <button onClick={login}>Login</button>
 
-
-      <p>
+      <p className="signupText">
         New user? <Link to="/signup">Create Account</Link>
       </p>
+
     </div>
-  );
+
+  </div>
+);
+
+
 }
