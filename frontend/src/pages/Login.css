@@ -79,3 +79,78 @@
 .img1 { top: 10%; left: 20%; }
 
 .img4 { bottom: 0%; right: 15%; }
+/* ===============================
+   Tablet
+================================ */
+@media (max-width: 1024px) {
+  .loginBox {
+    width: 90%;
+    max-width: 380px;
+    padding: 40px;
+  }
+
+  .floatImg {
+    width: 180px;
+    opacity: 0.6;
+  }
+
+  .img1 {
+    top: 5%;
+    left: 5%;
+  }
+
+  .img4 {
+    right: 5%;
+    bottom: 5%;
+  }
+}
+
+/* ===============================
+   Mobile
+================================ */
+@media (max-width: 768px) {
+  .loginWrapper {
+    padding: 20px;
+    align-items: center;
+  }
+
+  .loginBox {
+    width: 100%;
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .loginBox h1 {
+    font-size: 26px;
+  }
+
+  .loginBox p {
+    font-size: 14px;
+  }
+
+  .loginBox input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .loginBox button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* Floating images smaller & pushed outside */
+  .floatImg {
+    width: 120px;
+    opacity: 0.4;
+  }
+
+  .img1 {
+    top: -20px;
+    left: -30px;
+  }
+
+  .img4 {
+    bottom: -20px;
+    right: -30px;
+  }
+}
