@@ -1,55 +1,115 @@
-# 🩺 AI — Disease Prediction
+🩺 CURA AI — Intelligent Medical Assistant
 
-AI-powered healthcare web application that predicts diseases based on symptoms and allows users to chat with an AI doctor for medical guidance.
+CURA AI is an AI-powered healthcare assistant that predicts diseases from symptoms and allows users to chat with an AI doctor for personalized medical guidance.
 
-This project combines **Machine Learning, Web Development, and AI Chat** to simulate a real-world digital health assistant.
+It combines Machine Learning + AI Chat + PDF Medical Reports into a single smart healthcare platform.
 
----
+🚀 What CURA AI Does
 
-## 🚀 Features
+CURA AI helps users to:
 
-✔ Symptom-based disease prediction
-✔ Machine Learning (Naive Bayes)
-✔ AI Doctor chatbot for advice
-✔ React frontend (modern UI)
-✔ Flask backend API
-✔ Secure API key handling (.env)
+Select their symptoms
+
+Predict the most likely disease
+
+Get medical advice
+
+Download a medical report (PDF)
+
+Chat with an AI Doctor in real time
+
+All in one smooth experience.
+
+🧠 How CURA AI Works (Step-by-Step)
+1️⃣ User Login
+
+User logs in or signs up into the CURA AI system.
+
+2️⃣ Symptom Selection
+
+User selects symptoms like:
+
+Fever
+
+Cough
+
+Headache
+
+Body pain
+
+Breathing problem, etc.
+
+3️⃣ Disease Prediction
+
+The selected symptoms are sent to a Flask ML API, which predicts the most likely disease.
+
+4️⃣ Medical Result
+
+CURA AI shows:
+
+Predicted disease
+
+Description
+
+Doctor advice
+
+Recommended specialist
+
+5️⃣ Download Medical Report
+
+User can download a PDF medical report containing:
+
+Patient name
+
+Symptoms
+
+Disease
+
+Doctor advice
+
+Date
+
+6️⃣ Talk to AI Doctor
+
+User clicks “Talk to AI Doctor” and starts chatting with an AI assistant trained to give medical guidance based on the predicted disease.
+
+🛠️ Tech Stack
+Frontend
+
+React.js
+
+React Router
+
+CSS (Custom UI)
+
+Backend
+
+Python
+
+Flask
+
+REST APIs
+
+AI & ML
+
+Disease Prediction Model (Machine Learning)
+
+AI Chat API (for medical conversation)
+
+Other
+
+PDF generation using ReportLab
+
+Fetch API for communication
 
 
 
----
+## 🖼 Sample Output
 
-## 🧠 How It Works
-
-User selects symptoms
-↓
-ML model predicts disease
-↓
-AI Doctor chatbot activates
-↓
-User gets food, medicine & health advice
-
-
-
----
-
-## 🛠 Tech Stack
-
-Frontend:
-• React (Vite)
-• CSS
-
-Backend:
-• Python
-• Flask
-• Flask-CORS
-• Pandas
-• Scikit-learn
-• Joblib
-
-AI:
-• HuggingFace Inference API
-• Groq (for testing)
-
-Machine Learning:
-• Bernoulli Naive Bayes Classifier
+| Feature |
+|--------|
+| ![Login](images/login.png) |
+| ![Symptoms](images/symptoms.png) |
+| ![Disease Prediction](images/result.png) |
+| ![AI Doctor Chat](images/ai-chatbot.png) |
+| ![Medical Report](images/report.png) |
