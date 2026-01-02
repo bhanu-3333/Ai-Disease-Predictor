@@ -19,7 +19,7 @@ Download a medical report (PDF)
 Chat with an AI Doctor in real time
 
 All in one smooth experience.
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🧠 How CURA AI Works (Step-by-Step)
 1️⃣ User Login
 
@@ -72,7 +72,7 @@ Date
 6️⃣ Talk to AI Doctor
 
 User clicks “Talk to AI Doctor” and starts chatting with an AI assistant trained to give medical guidance based on the predicted disease.
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🛠️ Tech Stack
 Frontend
 
@@ -102,14 +102,14 @@ PDF generation using ReportLab
 
 Fetch API for communication
 
-
+|---------------------------------------------------|
 
 ## 🖼 Sample Output
-
-| Feature |
-|--------|
-| ![Login](images/login.png) |
-| ![Symptoms](images/symptoms.png) |
-| ![Disease Prediction](images/result.png) |
-| ![AI Doctor Chat](images/ai-chatbot.png) |
-| ![Medical Report](images/report.png) |
+<div align="center">
+  <img src="screenshot/output1.png" width="70%" /><br><br>
+  <img src="screenshot/output2.png" width="70%" /><br><br>
+  <img src="screenshot/output3.png" width="70%" /><br><br>
+   <img src="screenshot/output4.png" width="70%" /><br><br>
+  <img src="screenshot/output5.png" width="70%" /><br><br>
+  <img src="screenshot/output6.png" width="70%" />
+</div>
