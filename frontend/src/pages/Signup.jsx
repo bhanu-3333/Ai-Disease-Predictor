@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-
+import  "./Signup.css";
 export default function Signup() {
   const nav = useNavigate();
 
@@ -27,26 +27,59 @@ export default function Signup() {
     }
   };
 
-  return (
-    <div className="auth">
-      <h1>Create Account</h1>
+ return (
+  <div className="signupWrapper">
 
-      <input placeholder="Full Name" value={name} onChange={e => setName(e.target.value)} />
-      <input placeholder="Age" type="number" value={age} onChange={e => setAge(e.target.value)} />
+    {/* Floating Images */}
+  
+    <img src="/images/thermometer.png" className="floatImg img4" />
+
+    {/* Signup Card */}
+    <div className="signupBox">
+
+      <h1>Create Account</h1>
+      <p>Join CURA AI and start your smart healthcare journey</p>
+
+      <input
+        placeholder="Full Name"
+        value={name}
+        onChange={e => setName(e.target.value)}
+      />
+
+      <input
+        placeholder="Age"
+        type="number"
+        value={age}
+        onChange={e => setAge(e.target.value)}
+      />
 
       <select value={gender} onChange={e => setGender(e.target.value)}>
         <option>Male</option>
         <option>Female</option>
       </select>
 
-      <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+      <input
+        placeholder="Email"
+        value={email}
+        onChange={e => setEmail(e.target.value)}
+      />
 
-      <button onClick={signup}>Signup</button>
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={e => setPassword(e.target.value)}
+      />
 
-      <p>
+      <button onClick={signup}>Create Account</button>
+
+      <p className="loginText">
         Already have account? <Link to="/">Login</Link>
       </p>
+
     </div>
-  );
+
+  </div>
+);
+
 }
