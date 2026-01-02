@@ -153,7 +153,7 @@ export default function Symptoms({ goChat }) {
   const downloadReport = async () => {
     const user = JSON.parse(localStorage.getItem("user"));
 
-    const res = await fetch("http://127.0.0.1:5000/report", {
+    const res = await fetch("https://ai-disease-predictor-4.onrender.com/report", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -180,7 +180,7 @@ export default function Symptoms({ goChat }) {
   };
 
   const submit = async () => {
-    const res = await fetch("http://127.0.0.1:5000/predict", {
+    const res = await fetch("https://ai-disease-predictor-4.onrender.com/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
