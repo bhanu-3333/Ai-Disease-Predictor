@@ -58,7 +58,7 @@ export default function Home() {
       {/* NAVBAR */}
       <nav className="nav">
         <div className="logo">
-          <img src="/images/logo.png" alt="CURA AI"/>
+          <img src="/images/ai-robot.png" alt="CURA AI"/>
           <span>CURA AI</span>
         </div>
 
@@ -93,7 +93,7 @@ export default function Home() {
         </div>
 
         <div className="heroImg">
-          <img src="/images/hero-heart.png" alt="AI Doctor"/>
+          <img src="/images/ai-robot.png" alt="AI Doctor"/>
         </div>
       </section>
 
