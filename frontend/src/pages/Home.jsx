@@ -136,7 +136,7 @@ export default function Home() {
 {/* ABOUT CURA AI */}
 <section className="about">
   <div className="aboutLeft">
-    <p className="aboutSmall">( SINCE 2025 )</p>
+    
     <h4>About CURA AI</h4>
 
     <img 
