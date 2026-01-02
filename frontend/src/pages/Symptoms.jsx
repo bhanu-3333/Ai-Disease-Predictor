@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const symptomsList = {
   fever: "Fever",
@@ -32,6 +33,7 @@ const symptomsList = {
   abdominal_swelling: "Abdominal Swelling",
   bleeding: "Bleeding"
 };
+
 const diseaseInfo = {
   "Flu": {
     desc: "Flu is a viral infection causing fever, cough, body pain and weakness.",
@@ -138,39 +140,40 @@ const doctorMap = {
   "Gastritis": "Gastroenterologist"
 };
 
-
 export default function Symptoms({ goChat }) {
+
+  const navigate = useNavigate();
+
   const [data, setData] = useState(
     Object.keys(symptomsList).reduce((a, k) => ({ ...a, [k]: 0 }), {})
   );
 
   const [result, setResult] = useState("");
-const downloadReport = async () => {
-  const user = JSON.parse(localStorage.getItem("user"));
 
-  const res = await fetch("http://127.0.0.1:5000/report", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name: user.name,
-      age: user.age,
-      gender: user.gender,
-      disease: result,
-      symptoms: Object.keys(data).filter(k => data[k]).join(", "),
-      doctor: doctorMap[result],
-      advice: diseaseInfo[result]?.advice
-    })
-  });
+  const downloadReport = async () => {
+    const user = JSON.parse(localStorage.getItem("user"));
 
-  const blob = await res.blob();
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "MediScan_Report.pdf";
-  a.click();
-};
+    const res = await fetch("http://127.0.0.1:5000/report", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: user.name,
+        age: user.age,
+        gender: user.gender,
+        disease: result,
+        symptoms: Object.keys(data).filter(k => data[k]).join(", "),
+        doctor: doctorMap[result],
+        advice: diseaseInfo[result]?.advice
+      })
+    });
 
-
+    const blob = await res.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "MediScan_Report.pdf";
+    a.click();
+  };
 
   const toggle = (k) => {
     setData({ ...data, [k]: data[k] ? 0 : 1 });
@@ -187,41 +190,233 @@ const downloadReport = async () => {
   };
 
   return (
-    <div className="card">
-      <h2>Select Your Symptoms</h2>
+    <>
+      <style>{`
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
 
-      <div className="symptomGrid">
-        {Object.keys(symptomsList).map((k) => (
-          <div
-            key={k}
-            className={`symptom ${data[k] ? "on" : ""}`}
-            onClick={() => toggle(k)}
-          >
-            {symptomsList[k]}
+        body {
+          font-family: "Inter", sans-serif;
+          background: #fdfbf6;
+          color: #1b1b1b;
+        }
+
+        .symptomsContainer {
+          min-height: 100vh;
+          background: #fdfbf6;
+          padding: 60px 80px;
+        }
+
+        .card {
+          background: #f5f1e9;
+          border-radius: 20px;
+          padding: 40px;
+          max-width: 1200px;
+          margin: 0 auto;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+
+        .card h2 {
+          font-size: 36px;
+          margin-bottom: 30px;
+          color: #1b1b1b;
+          text-align: center;
+          font-weight: 600;
+          position: relative;
+        }
+
+        .floatingImage {
+          position: absolute;
+          width: 200px;
+          top: -125px;
+          right: 40px;
+          opacity: 0.85;
+          pointer-events: none;
+        }
+
+        .symptomGrid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+          gap: 16px;
+          margin-bottom: 30px;
+        }
+
+        .symptom {
+          background: #ffffff;
+          padding: 18px 24px;
+          border-radius: 14px;
+          text-align: center;
+          cursor: pointer;
+          border: 2px solid transparent;
+          transition: all 0.3s ease;
+          font-weight: 500;
+          color: #444;
+        }
+
+        .symptom:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+        }
+
+        .symptom.on {
+          background: #1fa46b;
+          color: white;
+          border-color: #1fa46b;
+          box-shadow: 0 8px 20px rgba(31,164,107,0.3);
+        }
+
+        button {
+          padding: 14px 30px;
+          border-radius: 50px;
+          font-weight: 600;
+          border: 2px solid #1fa46b;
+          background: #1fa46b;
+          color: white;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-size: 16px;
+          display: block;
+          margin: 20px auto;
+        }
+
+        button:hover {
+          background: #0f7c5b;
+          border-color: #0f7c5b;
+          box-shadow: 0 8px 20px rgba(31,164,107,0.3);
+          transform: translateY(-2px);
+        }
+
+        .resultSection {
+          background: #e9f7f1;
+          padding: 30px;
+          border-radius: 18px;
+          margin-top: 30px;
+        }
+
+        .resultSection p {
+          margin-bottom: 16px;
+          line-height: 1.7;
+          color: #333;
+          font-size: 16px;
+        }
+
+        .resultSection p:first-child {
+          font-size: 28px;
+          font-weight: 600;
+          color: #1fa46b;
+          margin-bottom: 20px;
+        }
+
+        .resultSection b {
+          color: #1fa46b;
+          font-weight: 600;
+        }
+
+        .buttonGroup {
+          display: flex;
+          gap: 18px;
+          justify-content: center;
+          margin-top: 24px;
+        }
+
+        .buttonGroup button {
+          margin: 0;
+        }
+
+        .iconBtn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .btnIcon {
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+          .symptomsContainer {
+            padding: 30px 20px;
+          }
+
+          .card {
+            padding: 24px;
+          }
+
+          .card h2 {
+            font-size: 28px;
+          }
+
+          .symptomGrid {
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+          }
+
+          .buttonGroup {
+            flex-direction: column;
+          }
+
+          .buttonGroup button {
+            width: 100%;
+          }
+        }
+      `}</style>
+
+      <div className="symptomsContainer">
+        <div className="card">
+          <h2>
+            Select Your Symptoms
+            <img src="/images/medical.png" alt="Doctor" className="floatingImage" />
+          </h2>
+
+          <div className="symptomGrid">
+            {Object.keys(symptomsList).map((k) => (
+              <div
+                key={k}
+                className={`symptom ${data[k] ? "on" : ""}`}
+                onClick={() => toggle(k)}
+              >
+                {symptomsList[k]}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <button onClick={submit}>Predict Disease</button>
+          <button onClick={submit}>Predict Disease</button>
 
-     {result && (
-  <>
-    <p>{result}</p>
-    <p>{diseaseInfo[result]?.desc}</p>
-    <p><b>Doctor Advice:</b> {diseaseInfo[result]?.advice}</p>
-    <p><b>Recommended Doctor:</b> {doctorMap[result]}</p>
+          {result && (
+            <div className="resultSection">
+              <p>{result}</p>
+              <p>{diseaseInfo[result]?.desc}</p>
+              <p><b>Doctor Advice:</b> {diseaseInfo[result]?.advice}</p>
+              <p><b>Recommended Doctor:</b> {doctorMap[result]}</p>
 
-    <button onClick={downloadReport}>
-      📄 Download Medical Report
-    </button>
-    <button onClick={() => goChat(result)}>
-  🤖 Talk to AI Doctor
+              <div className="buttonGroup">
+                <button onClick={downloadReport} className="iconBtn">
+                  <img src="/images/pdf.png" alt="PDF" className="btnIcon" />
+                  Download Medical Report
+                </button>
+              <button
+  onClick={() => {
+    goChat(result);     // save disease in App state
+    navigate("/chat"); // 🔥 go to chat page
+  }}
+  className="iconBtn"
+>
+  <img src="/images/ai.png" alt="AI Doctor" className="btnIcon" />
+  Talk to AI Doctor
 </button>
 
-  </>
-)}
 
-     
-    </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
   );
 }
