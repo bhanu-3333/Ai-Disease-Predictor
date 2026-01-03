@@ -1,3 +1,21 @@
+## 🖼 Sample Output
+<div align="center">
+  <img src="screenshot/output1.png" width="70%" /><br><br>
+  <img src="screenshot/output2.png" width="70%" /><br><br>
+  <img src="screenshot/output3.png" width="70%" /><br><br>
+   <img src="screenshot/output4.png" width="70%" /><br><br>
+  <img src="screenshot/output5.png" width="70%" /><br><br>
+  <img src="screenshot/output6.png" width="70%" />
+</div>
+
+
+
+
+
+
+
+
+
 🩺 CURA AI – Intelligent Medical Assistant
 
 CURA AI is an AI-powered healthcare platform that helps users predict possible diseases based on their symptoms, consult an AI doctor, and generate professional medical reports — all in one place.
@@ -127,15 +145,6 @@ To make healthcare smarter, faster, and more accessible using AI and machine lea
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🖼 Sample Output
-<div align="center">
-  <img src="screenshot/output1.png" width="70%" /><br><br>
-  <img src="screenshot/output2.png" width="70%" /><br><br>
-  <img src="screenshot/output3.png" width="70%" /><br><br>
-   <img src="screenshot/output4.png" width="70%" /><br><br>
-  <img src="screenshot/output5.png" width="70%" /><br><br>
-  <img src="screenshot/output6.png" width="70%" />
-</div>
 
  Built by...
 
